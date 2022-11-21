@@ -57,7 +57,7 @@ body {
     
 }
 
-.weatherCard, .weatherCardHeader, .weatherCity, .weatherDate, .weatherCardMain, .weatherCardMainLeft, .weatherSky, .weatherCardMainRight, .weatherTemperature, .changeMeasurement, .weatherCardAdditionalLeft, .weatherCardAdditionalRight, .feelsLikeTitle, .feelsLike, .humidityTitle, .humidity, .weatherTemperatureComment, .searchCity, .searchCityInput{
+.weatherCard, .weatherCardHeader, .weatherCity, .weatherDate, .weatherCardMain, .weatherCardMainLeft, .weatherSky, .weatherSkyIcon, .weatherCardMainRight, .weatherTemperature, .changeMeasurement, .weatherCardAdditionalLeft, .weatherCardAdditionalRight, .feelsLikeTitle, .feelsLike, .humidityTitle, .humidity, .weatherTemperatureComment, .searchCity, .searchCityInput, #searchCity, #skyIconImg{
     background:none;
 }
 
@@ -129,6 +129,9 @@ body {
 }
 
 .weatherCardMainLeft{
+
+    display: grid;
+    grid-template-rows: 1fr 5fr;
     width: 100%;
     text-align: center;
     border-right: solid 1px rgba(255, 255, 255, .7);
@@ -137,16 +140,20 @@ body {
 .weatherCardMainRight{
     width: 100%;
     display: grid;
-    grid-template-rows: 2fr 1fr 2fr;
+    grid-template-rows: 3fr 1fr ;
     justify-self: center;
 }
 
 .weatherTemperature{
+    line-height: 100px;
     text-align: center;
     
     font-size: 45px;
+    transition: 500ms opacity ease-in-out;
     
 }
+
+
 
 .weatherTemperatureComment {
     padding-top: 10px;
@@ -163,6 +170,9 @@ body {
     padding: 2px;
 
     border-bottom: dotted 1px white;
+}
+.changeMeasurement:hover{
+    cursor: pointer;
 }
 
 .weatherCardAdditional {
@@ -192,6 +202,10 @@ body {
     
 }
 
+.weatherCardSearch{
+    line-height: 30px;
+}
+
 .searchCity{
 
 }
@@ -201,9 +215,47 @@ body {
     border-right: none;
     border-top: none;
     border-bottom: solid 1px white;
+    
 }
 
+.searchCityInput:focus{
+    outline: none;
+}
 
+#searchCity{
+    color: white;
+    
+    height: 16px;
+    width: 16px;
+    
+}
+
+#searchCity:hover{
+    cursor: pointer;
+    
+
+}
+
+.magnify{
+    filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(7495%) hue-rotate(8deg) brightness(105%) contrast(99%)contrast(119%);
+    height: 16px;
+    width: 16px; 
+    background: none;
+    
+}
+
+.magnify:hover{
+    cursor: pointer;
+}
+
+#skyIconImg{
+    filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(7495%) hue-rotate(8deg) brightness(105%) contrast(99%)contrast(119%);
+    
+    height: 100px;
+    width: 100px; 
+    background: none;
+
+}
 
 
 
