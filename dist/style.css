@@ -1,0 +1,210 @@
+
+@font-face {
+    font-family: 'walkway_blackregular';
+    
+    src: url('/src/Walkway_Black-webfont.woff') format('woff');
+    
+            
+    font-weight: normal;
+    font-style: normal;
+
+}
+    
+
+
+* {
+    
+    font-family: 'walkway_blackregular';
+    color: white;
+    background-color:whitesmoke;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    
+}
+
+.content {
+    
+    height: 100%;
+    width: 100%;
+    background-image: url(/src/darktrees.jpg);
+    background-size: cover;
+    background-position: center;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
+    
+    
+    
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: none;
+    text-align: center;
+    line-height: 100px;
+    max-height: 100px;
+    min-height: 60px;
+    font-style: oblique;
+    font-size: 40px;
+    color: rgba(255, 255, 255, 30%);
+    
+}
+
+.weatherCard, .weatherCardHeader, .weatherCity, .weatherDate, .weatherCardMain, .weatherCardMainLeft, .weatherSky, .weatherCardMainRight, .weatherTemperature, .changeMeasurement, .weatherCardAdditionalLeft, .weatherCardAdditionalRight, .feelsLikeTitle, .feelsLike, .humidityTitle, .humidity, .weatherTemperatureComment, .searchCity, .searchCityInput{
+    background:none;
+}
+
+.weatherCard {
+    margin-top: 40px;
+    padding: 30px;
+    height: 400px;
+    width: 300px;
+    min-width: 260px;
+    background: none;
+    border: solid 3px rgba(255, 255, 255, .2);
+    
+    border-radius: 14px;
+    
+    
+    transition: 333ms border ease-in-out;
+
+    
+    
+    
+}
+
+.weatherCard:hover, .weatherCard:focus{
+
+    border: solid 2px rgba(255, 255, 255, .7);
+
+}
+
+
+
+.weatherCard > div {
+    color: rgba(255, 255, 255, .7) ;
+    background: none;
+}
+
+.weatherCardHeader {
+    background: none;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    font-size: 14px;
+    border-bottom: solid 1px  rgba(255, 255, 255, .7);
+    padding-bottom: 10px;
+}
+
+.weatherCardHeader > div {
+    background: none;
+}
+
+.weatherDate{
+    justify-self: right;
+}
+
+.weatherCardMain{
+    height: 150px;
+    background: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    
+    border-bottom: solid 1px white;
+
+    
+    
+} 
+
+.weatherCardMainLeft, .weatherCardMainRight{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.weatherCardMainLeft{
+    width: 100%;
+    text-align: center;
+    border-right: solid 1px rgba(255, 255, 255, .7);
+}
+
+.weatherCardMainRight{
+    width: 100%;
+    display: grid;
+    grid-template-rows: 2fr 1fr 2fr;
+    justify-self: center;
+}
+
+.weatherTemperature{
+    text-align: center;
+    
+    font-size: 45px;
+    
+}
+
+.weatherTemperatureComment {
+    padding-top: 10px;
+    font-style: oblique;
+    font-size: 12px;
+    text-align: center;
+}
+
+.changeMeasurement{
+    line-height: 20px;
+    justify-self: center;
+    font-size: 12px;
+    
+    padding: 2px;
+
+    border-bottom: dotted 1px white;
+}
+
+.weatherCardAdditional {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 10px;
+
+    border-bottom: dotted 1px white;
+}
+
+
+.feelsLikeTitle, .humidityTitle{
+    padding-top: 10px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.feelsLike, .humidity{
+    padding-top: 10px;
+    font-size: 20px;
+    text-align: center;
+
+}
+
+.feelsLike{
+    border-right: dotted 1px white;
+    
+}
+
+.searchCity{
+
+}
+
+.searchCityInput{
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: solid 1px white;
+}
+
+
+
+
+
+
